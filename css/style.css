@@ -1,12 +1,20 @@
-img{
-    width: 25%;
+.block {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+img {
+    height: 100%;
 }
 
 /* https://www.w3schools.com/howto/howto_css_flip_image.asp */
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
-    background-color: transparent;
+    background-color: dodgerblue;
+    display: inline-block;
     width: 300px;
     height: 200px;
     border: 1px solid #f1f1f1;
@@ -24,7 +32,7 @@ img{
   }
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-box:hover .flip-box-inner {
+  .flip-box-clicked .flip-box-inner {
     transform: rotateY(180deg);
   }
   
@@ -45,6 +53,7 @@ img{
   /* Style the back side */
   .flip-box-back {
     background-color: dodgerblue;
+    overflow: hidden;
     color: white;
     transform: rotateY(180deg);
   }

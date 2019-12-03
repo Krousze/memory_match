@@ -30,12 +30,7 @@ class Game {
     static setUpGame() {
         const cards = Game.createCards();
         const body = document.getElementById('body');
-        cards.forEach(card => {
-             card.render(body)
-            //  card.addEventListener("click", this.flip)
-        });
+        cards.forEach(card => card.render(body)
+);
     }
-    // flip(event) {
-    //     console.log(event.target)
-    // }
 }
