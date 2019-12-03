@@ -1,4 +1,4 @@
-export class Card {
+class Card {
     
     constructor(fileName) {
         this.fileName = fileName;
