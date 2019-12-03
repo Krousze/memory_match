@@ -14,7 +14,13 @@ class Card {
         img.alt = this.getAltText();
         //adds <img src='img/fileName.jpg' alt='fileName'> to DOM
         parent.appendChild(img);
+        img.addEventListener("click", this.flip)
     }
+
+    flip(event) {
+        console.log(event)
+    }
+
 
     getUrl = () => 'img/' + this.fileName;
 
