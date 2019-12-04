@@ -1,5 +1,7 @@
 class Game {
 
+    static ROWS_OF_CARDS = 5;
+    static CARDS_IN_ROW = 8;
     static FILE_NAMES = [
         "bulldog.jpg",
         "burrito.png",
@@ -43,8 +45,24 @@ class Game {
     static setUpGame() {
         const cards = Game.createCards();
         const body = document.getElementById('body');
-        cards.forEach(card => card.render(body)
-);
+        Game.renderCards(cards, body);
+    }
+    //Renders 5 rows of 8 cards
+    static renderCards(cards, parentElement) {
+        let cardsIndex = 0;
+
+        for (let i = 0; i < Game.ROWS_OF_CARDS; i++) {
+            //Creates a new row and adds it to the DOM
+            let div = document.createElement('div');
+            div.classList.add('card-row'); //For styling
+            parentElement.append(div);
+
+            //Loops 8 times and adds them to the div created the previous 2 lines
+            for (let j = 0; j < Game.CARDS_IN_ROW; j++) {
+                cards[cardsIndex].render(div);
+                cardsIndex++;
+            }
+        }
     }
     static counter = 0;
 

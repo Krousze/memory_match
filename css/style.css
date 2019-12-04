@@ -5,6 +5,12 @@
   z-index: 1;
 }
 
+.card-row {
+  display: flex;
+  justify-content: space-around;
+  height: calc(96vh / 5);
+}
+
 img {
     height: 100%;
 }
@@ -15,7 +21,7 @@ img {
 .flip-box {
     background-color: transparent;
     display: inline-block;
-    width: 15%;
+    width: 12%;
     height: 100px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
