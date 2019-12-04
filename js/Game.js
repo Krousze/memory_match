@@ -29,8 +29,6 @@ class Game {
         let array = Game.FILE_NAMES.map(fileName => new Card(fileName));
         array.push(...array); //Just in case we find that this is not working array.push(Game.FILE_NAMES.map(fileName => new Card(fileName)))
         Game.shuffleArray(array);
-
-
         return array;
     }
     static shuffleArray(array) {

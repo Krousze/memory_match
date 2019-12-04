@@ -42,7 +42,6 @@ class Card {
         flipBox.classList.add('flip-box-clicked');
         const elements = document.getElementsByClassName('flip-box-clicked');
 
-        console.log(elements[0].childNodes[0].childNodes[1].childNodes[0].alt)
         if (elements.length === 2) {
             const cover = document.getElementById('cover');
             cover.classList.add('block');
@@ -50,8 +49,14 @@ class Card {
             const firstElementText = elements[0].childNodes[0].childNodes[1].childNodes[0].alt;
             const secondElementText = elements[1].childNodes[0].childNodes[1].childNodes[0].alt
             if (firstElementText === secondElementText)
-            {
-                
+            { 
+                setTimeout(() => {
+                elements[1].childNodes[0].remove();
+                elements[0].childNodes[0].remove();
+                elements[1].classList.remove('flip-box-clicked');
+                elements[0].classList.remove('flip-box-clicked');
+                cover.classList.remove('block');
+                }, 1500);
             } else if (firstElementText !== secondElementText) 
             {
                 setTimeout(() => {

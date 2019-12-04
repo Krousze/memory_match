@@ -13,7 +13,7 @@ img {
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
-    background-color: dodgerblue;
+    background-color: transparent;
     display: inline-block;
     width: 15%;
     height: 100px;
@@ -52,7 +52,7 @@ img {
   
   /* Style the back side */
   .flip-box-back {
-    background-color: dodgerblue;
+    background-color: transparent;
     overflow: hidden;
     color: white;
     transform: rotateY(180deg);
