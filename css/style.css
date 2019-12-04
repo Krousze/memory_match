@@ -15,8 +15,8 @@ img {
 .flip-box {
     background-color: dodgerblue;
     display: inline-block;
-    width: 300px;
-    height: 200px;
+    width: 15%;
+    height: 100px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }

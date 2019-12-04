@@ -24,8 +24,20 @@ class Game {
     ];
 
     //creates an array of card objects for each file
-    static createCards = () => Game.FILE_NAMES.map(fileName => new Card(fileName));
-
+    static createCards = () => {
+        // Game.FILE_NAMES.map(fileName => new Card(fileName));
+        let array = Game.FILE_NAMES.map(fileName => new Card(fileName));
+        Game.shuffleArray(array);
+        return array;
+    }
+    static shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
     //Creates card objects and appends them to the DOM
     static setUpGame() {
         const cards = Game.createCards();
