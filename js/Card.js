@@ -56,6 +56,7 @@ class Card {
                 elements[1].classList.remove('flip-box-clicked');
                 elements[0].classList.remove('flip-box-clicked');
                 cover.classList.remove('block');
+                Game.win_lose();
                 }, 1500);
             } else if (firstElementText !== secondElementText) 
             {
@@ -65,7 +66,6 @@ class Card {
                     cover.classList.remove('block');
                 }, 1500);
             }
-
         }
 
     }
@@ -73,4 +73,5 @@ class Card {
     getUrl = () => 'img/' + this.fileName;
 
     getAltText = () => this.fileName.substring(0, this.fileName.lastIndexOf('.'));
+    
 }

@@ -29,8 +29,8 @@ class Game {
     static createCards = () => {
         // Game.FILE_NAMES.map(fileName => new Card(fileName));
         let array = Game.FILE_NAMES.map(fileName => new Card(fileName));
-        array.push(...array); //Just in case we find that this is not working array.push(Game.FILE_NAMES.map(fileName => new Card(fileName)))
-        Game.shuffleArray(array);
+        array.push(...Game.FILE_NAMES.map(fileName => new Card(fileName))); //Just in case we find that this is not working array.push(...Game.FILE_NAMES.map(fileName => new Card(fileName)))
+        Game.shuffleArray(array);//array.push(...array)
         return array;
     }
     static shuffleArray(array) {
@@ -62,6 +62,18 @@ class Game {
                 cards[cardsIndex].render(div);
                 cardsIndex++;
             }
+        }
+    }
+    static counter = 0;
+
+    static win_lose() {
+        Game.counter++;
+        if (Game.counter === 20){
+            const body = document.getElementById("body");
+            body.innerHTML = '';
+            const win = document.createElement('p');
+            win.innerText = "Great Memory!\n You Won!!";
+            document.body.appendChild(win);
         }
     }
 }
