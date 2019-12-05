@@ -1,3 +1,4 @@
+/* This class is assigned to #cover upon 2 card flips*/
 .block {
   position: absolute;
   height: 100%;
@@ -5,10 +6,14 @@
   z-index: 1;
 }
 
-.card-row {
+#body {
+  width: 80%;
+  height: 90vh;
+  /* max-width: 1960px; */
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
-  height: calc(96vh / 5);
+  justify-content: space-evenly;
+  flex-flow: wrap;
 }
 
 img {
@@ -21,8 +26,8 @@ img {
 .flip-box {
     background-color: transparent;
     display: inline-block;
-    width: 12%;
-    height: 100px;
+    width: calc(100%/6);
+    height: calc(90vh/6);
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
@@ -53,7 +58,10 @@ img {
   /* Style the front side (fallback if image is missing) */
   .flip-box-front {
     background-color: #bbb;
-    color: black;
+    background-image: url('https://media.freestocktextures.com/cache/64/84/6484b7f00c6c19bd08f5358a1183e6ce.jpg');
+    /* color: black; */
+    border: 3px solid black;
+    border-radius: 3px;
   }
   
   /* Style the back side */
