@@ -1,7 +1,7 @@
 class Game {
 
     static counter = 0;
-    static TURNS = 20;
+    static TURNS = 1;
     static ROWS_OF_CARDS = 5;
     static CARDS_IN_ROW = 8;
     static FILE_NAMES = [
@@ -66,7 +66,6 @@ class Game {
             }
         }
     }
-    static counter = 0;
 
     static win_lose() {
         Game.counter++;
@@ -76,7 +75,7 @@ class Game {
             // const win = document.createElement('p');
             // win.innerText = "Great Memory!\n You Won!!";
             // document.body.appendChild(win);
-            Game.setUpGame
+            $('#myModal').modal('show');
         }
     }
 }
