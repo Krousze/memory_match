@@ -27,6 +27,7 @@ class Card {
         flipBoxInner.appendChild(flipBoxFront);
         flipBoxInner.appendChild(flipBoxBack);
         flipBoxBack.appendChild(img);
+        // $('.flip-box').each($(this).hide().fadeIn(1000));
     }
 
     createElement(elementType, className) {
@@ -70,7 +71,7 @@ class Card {
 
     }
 
-    getUrl = () => 'img/' + this.fileName;
+    getUrl = () => this.fileName;
 
     getAltText = () => this.fileName.substring(0, this.fileName.lastIndexOf('.'));
     

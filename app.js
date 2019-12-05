@@ -1,1 +1,1 @@
-Game.setUpGame();
+Game.getRandomImage();
