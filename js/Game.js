@@ -29,11 +29,24 @@ class Game {
 
     //creates an array of card objects for each file
     static createCards = () => {
+        Game.getRandomImage();
         // Game.FILE_NAMES.map(fileName => new Card(fileName));
         let array = Game.FILE_NAMES.map(fileName => new Card(fileName));
         array.push(...Game.FILE_NAMES.map(fileName => new Card(fileName))); //Just in case we find that this is not working array.push(...Game.FILE_NAMES.map(fileName => new Card(fileName)))
         Game.shuffleArray(array);//array.push(...array)
         return array;
+    }
+    static getRandomImage(){
+        const url = 'https://dog.ceo/api/breeds/image/random';
+        const imageUrl;
+        fetch(url) // Call the fetch function passing the url of the API as a parameter
+        .then(response => response.json())
+        .then(json => imageUrl = (json.message))
+        .catch(function() {
+            // This is where you run code if the server returns any errors
+        });
+        console.log(imageUrl)
+        return imageUrl;
     }
     static shuffleArray(array) {
         for (var i = array.length - 1; i > 0; i--) {
