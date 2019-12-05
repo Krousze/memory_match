@@ -6,6 +6,19 @@
   z-index: 1;
 }
 
+.modal-content {
+  text-align: center;
+  border: 3px solid black;
+  background-image: url('https://ak8.picdn.net/shutterstock/videos/34893928/thumb/7.jpg');
+}
+
+.modal-content p {
+  font-weight: bolder;
+  font-size: 23px;
+  background-color: white;
+  display: inline-block;
+}
+
 #body {
   width: 80%;
   height: 90vh;
@@ -14,6 +27,16 @@
   display: flex;
   justify-content: space-evenly;
   flex-flow: wrap;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  background-color: #9E4E20;
+  padding-bottom: 12px;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
 }
 
 img {
