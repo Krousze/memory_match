@@ -1,7 +1,7 @@
 class Game {
 
-    static MISSES = 2;
-    static TURNS = 3;
+    static MISSES = 6;
+    static TURNS = 18;
     static counter = 0;
     static turn_count = 0; 
     static card_flip_counter = 0;

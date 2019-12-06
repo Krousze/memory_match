@@ -1,4 +1,8 @@
-$('#quit').click();
+$('#quit').on('click', function(){
+    const p = document.createElement('p');
+    p.textContent = 'Thanks For Playing!!';
+    document.getElementById('body').append(p);
+});
 $('#restart-easy').on('click',function(){
     Game.mode = "easy";
     Game.counter = 0;
