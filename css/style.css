@@ -9,20 +9,29 @@
 .modal-content {
   text-align: center;
   border: 3px solid black;
-  background-image: url('https://ak8.picdn.net/shutterstock/videos/34893928/thumb/7.jpg');
+  background-image: url('https://media.giphy.com/media/5jT0jaNDsM6Ik7X9yq/giphy.gif');
+  background-color: lightgray;
+  background-blend-mode: overlay;
+  background-size: contain;
 }
 
 .modal-content p {
   font-weight: bolder;
   font-size: 23px;
-  background-color: white;
+  /* background-color: white; */
   display: inline-block;
 }
 
 #body {
-  width: 80%;
+  background-image: url('thomas.jpg');
+  background-color: lightgray;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+
+  /* width: 80%; */
   height: 90vh;
-  /* max-width: 1960px; */
+  max-width: 90vh;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;

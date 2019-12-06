@@ -1,7 +1,11 @@
 class Game {
 
     static counter = 0;
-    static TURNS = 18;
+    static TURNS = 3;
+    static TURN_COUNT = 0; //me
+    static CARD_FLIP_COUNTER = 0;//me
+    static mode = 'hard';
+    static MISSES = 2;
 
     static getRandomImage(){
         const url = `https://dog.ceo/api/breeds/image/random/${Game.TURNS}`;
@@ -27,11 +31,24 @@ class Game {
     }
 
     static win_lose() {
-        Game.counter++;
         if (Game.counter === Game.TURNS){
             const body = document.getElementById("body");
             body.innerHTML = '';
+            $('#modal-title').text('Congratulations!');
             $('#myModal').modal('show');
+        } else if (Game.isTurnCountReached()){
+            const body = document.getElementById("body");
+            body.innerHTML = '';
+            $('#modal-title').text('Sorry, You Lose!');
+            $('#myModal').modal('show');
+        }
+    }
+
+    static isTurnCountReached() {
+        if (Game.mode === 'hard' && Game.TURN_COUNT === Game.MISSES){
+            return true;
+        } else {
+            return false;
         }
     }
 }
