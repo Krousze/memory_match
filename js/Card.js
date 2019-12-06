@@ -42,10 +42,10 @@ class Card {
         const flipBox = event.target.parentElement.parentElement;
         flipBox.classList.add('flip-box-clicked');
         const elements = document.getElementsByClassName('flip-box-clicked');
-        Game.CARD_FLIP_COUNTER++; //me
+        Game.card_flip_counter++; 
         
         if (elements.length === 2) {
-            Game.CARD_FLIP_COUNTER = 0; //me
+            Game.card_flip_counter = 0; 
             
             const cover = document.getElementById('cover');
             cover.classList.add('block');
@@ -54,7 +54,7 @@ class Card {
             const secondElementText = elements[1].childNodes[0].childNodes[1].childNodes[0].alt
             if (firstElementText === secondElementText)
             { 
-                Game.TURN_COUNT = 0; //me
+                Game.turn_count = 0; 
                 Game.counter++;
                 setTimeout(() => {
                 elements[1].childNodes[0].remove();
@@ -70,8 +70,8 @@ class Card {
                     elements[1].classList.remove('flip-box-clicked');
                     elements[0].classList.remove('flip-box-clicked');
                     cover.classList.remove('block');
-                    Game.TURN_COUNT++; //me
-                    Game.win_lose();//me
+                    Game.turn_count++; 
+                    Game.win_lose();
                 }, 1500);
             }
         }
