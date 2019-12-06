@@ -18,8 +18,10 @@
 .modal-content p {
   font-weight: bolder;
   font-size: 23px;
-  /* background-color: white; */
   display: inline-block;
+}
+.hide{
+  display: none;
 }
 
 #body {
@@ -29,7 +31,6 @@
   background-size: cover;
   background-position: center;
 
-  /* width: 80%; */
   height: 90vh;
   max-width: 90vh;
   margin: 0 auto;
@@ -37,7 +38,15 @@
   justify-content: space-evenly;
   flex-flow: wrap;
 }
-
+#body p{
+  text-align: center;
+  font-weight: bolder;
+  color: red;
+  font-size: 180px;
+  display: inline-block;
+  text-shadow: 7px 7px 12px black;
+  padding-bottom: 12px;
+}
 h1 {
   text-align: center;
   color: white;

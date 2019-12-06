@@ -1,1 +1,3 @@
-Game.getRandomImage();
+$(document).ready(function(){
+    $('#myModal').modal('show');
+})

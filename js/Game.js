@@ -1,14 +1,16 @@
 class Game {
 
+    static MISSES = 6;
+    static TURNS = 18;
     static counter = 0;
-    static TURNS = 3;
-    static TURN_COUNT = 0; //me
-    static CARD_FLIP_COUNTER = 0;//me
+    static turn_count = 0; 
+    static card_flip_counter = 0;
     static mode = 'hard';
-    static MISSES = 2;
 
     static getRandomImage(){
         const url = `https://dog.ceo/api/breeds/image/random/${Game.TURNS}`;
+        const quit = document.getElementById('quit');
+        quit.classList.remove('hide');
         fetch(url) // Call the fetch function passing the url of the API as a parameter
         .then(response => response.json())
         .then(json => {
@@ -45,7 +47,7 @@ class Game {
     }
 
     static isTurnCountReached() {
-        if (Game.mode === 'hard' && Game.TURN_COUNT === Game.MISSES){
+        if (Game.mode === 'hard' && Game.turn_count === Game.MISSES){
             return true;
         } else {
             return false;
