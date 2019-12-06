@@ -9,13 +9,15 @@
 .modal-content {
   text-align: center;
   border: 3px solid black;
-  background-image: url('https://media.giphy.com/media/5jT0jaNDsM6Ik7X9yq/giphy.gif');
-  background-color: lightgray;
-  background-blend-mode: overlay;
-  background-size: contain;
+  background-image: url('https://media3.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif');
+  background-repeat: no-repeat;
+  /* background-color: lightgray;
+  background-blend-mode: overlay; */
+  background-size: cover;
 }
 
 .modal-content p {
+  background-color: rgba(255,255,255,.5);
   font-weight: bolder;
   font-size: 23px;
   display: inline-block;

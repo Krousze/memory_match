@@ -1,6 +1,6 @@
 class Game {
 
-    static MISSES = 6;
+    static MISSES = 8;
     static TURNS = 18;
     static counter = 0;
     static turn_count = 0; 
@@ -36,11 +36,15 @@ class Game {
         if (Game.counter === Game.TURNS){
             const body = document.getElementById("body");
             body.innerHTML = '';
+            let modal = document.getElementById("modal-content-container");
+            modal.style.backgroundImage = 'url("https://media3.giphy.com/media/wXgDB6t4Dtwhq/giphy.gif")';
             $('#modal-title').text('Congratulations!');
             $('#myModal').modal('show');
         } else if (Game.isTurnCountReached()){
             const body = document.getElementById("body");
             body.innerHTML = '';
+            let modal = document.getElementById("modal-content-container");
+            modal.style.backgroundImage = 'url("https://media0.giphy.com/media/TIUzDChxd7h4c/giphy.gif")';
             $('#modal-title').text('Sorry, You Lose!');
             $('#myModal').modal('show');
         }
